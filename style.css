@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+:root {
+    --primary-color:hsl(50, 81%, 62%);
+    --text-color:#fff;
+    --right-hero-bg:#4f4f4f;
+    --right-hero-gr:linear-gradient(-45deg,rgb(46, 46, 46) 0%, rgb(33, 33, 33) 50%, rgb(46, 46 ,46) 100%);
+    --bg-color:#282828;
+}
+.lightmode{
+    --text-color:#282828;
+    --right-hero-bg:#e9e9e9;
+}
+body {
+    background-color: var(--bg-color);
+}
+li{
+    list-style-type: none;
+}
+
+#logo img {
+    width:36px;
+    box-sizing: border-box;
+    transition:all 500ms ease;
+}
+#logo img:hover {
+    transform: scale(1.15);
+}
+.light img.darkImg{
+    display: none;
+}
+.dark img.lightImg{
+    display: none;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+.container {
+    margin:0 auto;
+    width:85%;
+    max-width: 1200px
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1); 
+    padding: 32px 0;
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.header nav,
+ul{
+    display: flex;
+}
+nav {
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul {
+    gap:36px;
+}
+.hero-section {
+    display: flex;
+    position: relative; 
+    justify-content: center;
+}
+.hero-section p.iGot,
+.hero-section p.whatYouWant{
+    text-align: center;
+    position: absolute;
+}
+.hero-section p.iGot {
+    top:150px;
+    transform: translateX(0%);
+    background-color: var(--primary-color);    
+}
+.hero-section p.whatYouWant{
+    top:750px;
+    transform: translateX(0%);
+    background-color: var(--primary-color);  
+}
+.hero-section p.iGot,
+.hero-section p.color,
+.hero-section p.whatYouWant{
+    padding:18px 60px;
+    border-radius: 6px;
+}
+.hero-section .right-hero h1, p {
+    font-family: monospace;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+}
+.hero-section p {
+    font-size: 24px;
+}
+.right-hero,
+.left-hero {
+    flex:1;
+    text-align: center;
+}
+.left-hero{
+    margin-top: 117px;
+    height:768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+    background: linear-gradient(-45deg,rgb(184, 184, 184) 0%, rgb(255, 255, 255) 50%, rgb(184, 184, 184) 100%);
+}
+.right-hero{
+    margin-top: 117px;
+    height:768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+    background: #4f4f4f;
+    color:var(--text-color);
+    background-color: var(--right-hero-bg);
+    background: var(--right-hero-gr)
+}
+button.darkBtn {
+    background-color: #dbdbdb;
+    border:1px solid transparent
+}
+.right-hero button {
+    font-family: monospace;
+}
+button {
+    cursor: pointer;
+    padding:8px 32px;
+    background-color: transparent;
+    border:1px solid #282828;
+    transition:all 500ms ease;
+    border-radius: 6px;
+}
+button:hover {
+    background-color: #282828;
+    color:#fff;
+}
+button.darkBtn:hover {
+    border:1px solid #dbdbdb;
+    color:#fff;
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px){
+    nav {
+        justify-content: center;
+    }
+    nav ul {
+        display: none;
+    }
+    .hero-section p.iGot,
+    .hero-section p.color,
+    .hero-section p.whatYouWant{
+        padding:9px 30px;
+    }
+    button {
+        padding: 14px 32px;
+        font-size: 1rem;   
+    }
+}
+
+@media screen and (max-width: 600px){
+    nav {
+        justify-content: center;
+    }
+    nav ul {
+        display: none;
+    }
+    button {
+        padding: 12px 40px;
+        font-size: 1.1rem;
+    }
+    .hero-section {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .left-hero,
+    .right-hero {
+        width: 100%;
+        height: auto;  
+        padding: 60px 20px;
+        margin-top: 0; 
+    }
+
+    .hero-section h1 {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    .hero-section p {
+        font-size: clamp(14px, 4vw, 20px);
+    }
+
+    .hero-section p.iGot,
+    .hero-section p.whatYouWant,
+    .hero-section p.color {
+        display: none;
+    }
+}
