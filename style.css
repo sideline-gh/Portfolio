@@ -7,7 +7,7 @@
     font-family: "Roboto", sans-serif;
 }
 body {
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 :root {
     --primary-color:hsl(50, 81%, 62%);
@@ -79,7 +79,7 @@ h2 {
     font-size: clamp(1rem, 5vw, 3rem);
 }
 p  { 
-    font-size: clamp(0.75rem, 3vw, 1.5rem); 
+    font-size: clamp(0.1rem, 3vw, 1.5rem); 
 }
 
 .journey-content span {
@@ -288,13 +288,14 @@ button.darkBtn:hover {
     line-height: 1.4;
     letter-spacing: 1px;
 }
-
 hr {
     height: 1px;
     margin:16px 0;
     opacity: 0.5;
     width:100%;
+    max-width:500px;
 }
+  
 .graphix-section hr,
 .projects-section hr,
 .contact-section hr{ 
@@ -376,24 +377,29 @@ hr {
     .slider-wrapper {
         flex-direction: column;
         gap: 8px;
-}
+    }
 
     .arrow {
         font-size: 36px;
         padding:20px 32px;
         order:-5;
+    }
+    .cards-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-items: center;
+    }
 }
+h3 {
+    font-size: clamp(5rem, 10rem, 20rem);
 }
 .mobile-version-case {
     margin-top: 4rem;
 }
 .mobile-version-case img {
-    display: block;
-    width: 100%;
-    height: auto;        
-    max-width: 100%;      
-    margin: 0 auto 2rem; 
-    border: 1px solid gray;
+    max-width: 100%;
+    border:1px solid gray;
 }
 
 p#case-closure {
@@ -472,7 +478,7 @@ button#seeMoreBtn:hover {
 }
 
 .journey-section { 
-    height:1500px; 
+    margin-bottom:150px;
 }
 .journey-content{
     display: grid;
@@ -486,22 +492,18 @@ button#seeMoreBtn:hover {
 .journey-prog    { 
     grid-column: 2; 
     grid-row:2; 
-    text-align: right; 
+}
+.journey-prog h2 {
+    text-align: right;
+}
+.journey-prog span {
+    text-align:left;
+    margin-left:auto;
+    display: block;
 }
 
-@media (max-width: 1000px) {
-    .journey-content { 
-        grid-template-columns: 1fr; 
-    }
-    .journey-graphix { 
-        grid-column: 1; 
-        grid-row: 1; 
-    }
-    .journey-prog    { 
-        grid-column: 1; 
-        grid-row: 2; 
-    }
-}
+
+
 .slider-wrapper { 
     display: flex; 
 }
@@ -517,12 +519,91 @@ button#seeMoreBtn:hover {
         display: block; 
     }
 }
-
-
-
-
-
-
-
-
-
+.projects-section{
+    margin-bottom:150px;
+}
+.projects-section h1{
+    text-align: right;
+}
+.cards-content {
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+    gap:32px;
+}
+.project-card {
+    width:400px;
+    height:500px;
+    background-color: #4f4f4f;
+    padding:48px;
+    color:#ccc;
+    border-radius: 24px;
+    transition:all 500ms ease;
+}
+.project-card:hover {
+    transform: scale(1.02);
+    transform: translateY(-5px);
+    filter:drop-shadow(0px 20px 20px #00000038)
+}
+.project-card h3 {
+    align-items: start;
+    font-size: 40px;
+    font-weight: 600;
+}
+.card-btn {
+    background-color: var(--primary-color);
+    border:none;
+    margin-top: 24px;
+    font-size: 1rem;
+}
+.card-btn:hover {
+    background-color: var(--primary-color);
+    color:#282828;
+    filter: drop-shadow(0px 5px 7.5px #edd3503b);
+}
+.project-card {
+    position: relative;
+}
+.project-card img {
+    position: absolute;
+    left:0;
+    right:0;
+    max-width: 100%;
+    bottom:0;
+    border-radius: 0 0 24px 24px;
+}
+@media (max-width: 1000px) {
+    .journey-content { grid-template-columns: 1fr; 
+    }
+    .journey-graphix { 
+        grid-column: 1; 
+        grid-row: 1; 
+    }
+    .journey-prog    { 
+        grid-column: 1; 
+        grid-row: 2; 
+    }
+    .cards-content {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+    .project-card:hover {
+        transform: none;
+        filter:none;
+    }
+    button#seeMoreBtn:hover {
+        transform: none;
+        filter: none;
+    }
+    #logo img:hover {
+        transform: none;
+    }
+    .arrow:hover {
+        background-color: #ccc;
+    }
+    .card-btn:hover{
+        transform:none;
+        filter:none;
+    }
+}
