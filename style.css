@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 }
 :root {
     --primary-color:hsl(50, 81%, 62%);
-    --text-color:#fff;
+    --text-color:#ccc;
     --right-hero-bg:#4f4f4f;
     --right-hero-gr:linear-gradient(-45deg,rgb(46, 46, 46) 0%, rgb(33, 33, 33) 50%, rgb(46, 46 ,46) 100%);
     --bg-color:#282828;
@@ -40,6 +42,17 @@ a{
     color:#fff;
     text-decoration: none;
 }
+nav a{
+    transition:all 500ms ease
+}
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    color:var(--primary-color);
+    text-decoration-skip-ink: none;
+    text-underline-offset: 10px;
+    text-decoration-color:var(--primary-color);
+}
 .container {
     margin:0 auto;
     width:85%;
@@ -51,8 +64,9 @@ a{
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.1); 
+    background: rgb(40, 40, 40); 
     padding: 32px 0;
+    border-radius: 0 0 48px 48px;
 }
 h1 {
   font-size: clamp(1.5rem, 5vw, 3rem);
@@ -223,4 +237,186 @@ button.darkBtn:hover {
         display: none;
     }
 }
+.case-studies-section {
+    color:#fff;
+    margin: 100px auto;
+    height:1500px;
+}
+.case-studies-section h1,
+.graphix-section h1,
+.journey-section h1,
+.projects-section h1,
+.about-section h1,
+.contact h1{
+    color:#ccc;
+    font-size: 64px;
+}
+.case-studies-section h2,
+.graphix-section h2,
+.journey-section h2,
+.projects-section h2,
+.about-section h2,
+.contact h2 {
+    color:var(--primary-color);
+    font-weight: 500;
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+.case-studies-section span,
+.graphix-section span,
+.journey-section span,
+.projects-section span,
+.about-section span,
+.contact span {
+    color:#fff;
+    opacity:0.75;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+.case-studies-section hr,
+.graphix-section hr,
+.journey-section hr,
+.projects-section hr,
+.about-section hr,
+.contact-section hr{
+    height: 1px;
+    margin:16px 0;
+    opacity: 0.5;
+    width:500px;
+}
+.graphix-section hr,
+.projects-section hr,
+.contact-section hr{
+    float:right;
+}
+.case-studies-images {
+    gap:24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width:900px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top:100px;
+    
+}
+.slider-wrapper {
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+.case-img {
+    max-width: 100%;
+    border:1px solid gray;
+}
 
+.case-img.active {
+    opacity: 1;
+    position: relative;
+}
+.slider{
+    position: relative;
+}
+p.arrow {
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 500ms ease;
+    user-select: none;
+    background-color: #ccc;
+    padding:20px 28px;
+    border-radius: 50%;
+    color:#282828;
+    margin-top: 64px;
+}
+.arrow:hover {
+    background-color: var(--primary-color);
+}
+p#case-closure {
+    margin:50px auto;
+    border-radius: 48px 0 48px 0;
+    max-width: 850px;
+    font-family: inherit; 
+    font-weight: 300; 
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding:32px;
+    line-height: 1.6;
+    color:#ccc;
+}
+.textEnabled {
+    display: block;
+}
+
+.textDisabled {
+    display: none;
+}
+.slider-text {
+    position: relative;
+}
+.imgText {
+    position: absolute;
+    bottom:25px;
+    text-align: center;
+}
+button#seeMoreBtn {
+    background-color: var(--primary-color);
+    margin-top: 32px;
+    float: right;
+    padding:12px 32px;
+    font-size: 16px;
+    border-radius: 10px;
+    border:0;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+button#seeMoreBtn:hover {
+    transform: translateY(-5px);
+    color: #282828;
+    filter: drop-shadow(0px 5px 7.5px #edd3503b);
+}
+.graphix-section{
+    margin-top: 100px;
+    text-align: right;
+}
+.graphix-section img {
+    max-width: 100%;
+    width:1000px;
+    margin: 0 auto;
+    display: block;
+}
+.graphix-section h2 {
+    margin-bottom: 16px;
+}
+.graphix-img {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.journey-section {
+    height:1500px;
+}
+.journey-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width:100%;
+}
+.journey-graphix {
+    float:left;
+}
+.journey-prog{
+    float:right;
+}
+.journey-prog {
+    text-align: right;
+}
