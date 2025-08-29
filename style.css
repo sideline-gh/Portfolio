@@ -74,8 +74,11 @@ h1 {
 p {
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
-
-
+.journey-content span {
+  display: block;
+  max-width: 60ch; 
+  line-height: 1.5;
+}
 
 @media (max-width: 900px) {
     .grid {
@@ -159,8 +162,15 @@ ul {
     background: var(--right-hero-gr)
 }
 button.darkBtn {
+    color:#282828;
     background-color: #dbdbdb;
-    border:1px solid transparent
+    border:1px solid transparent;
+}
+button.lightBtn {
+    color:#282828;
+}
+#seeMoreBtn {
+    color:#282828;
 }
 .right-hero button {
     font-family: monospace;
@@ -242,12 +252,12 @@ button.darkBtn:hover {
     margin: 100px auto;
     height:1500px;
 }
-.case-studies-section h1,
-.graphix-section h1,
-.journey-section h1,
-.projects-section h1,
-.about-section h1,
-.contact h1{
+.case-studies-section h1.sectionH1,
+.graphix-section h1.sectionH1,
+.journey-section h1.sectionH1,
+.projects-section h1.sectionH1,
+.about-section h1.sectionH1,
+.contact h1.sectionH1{
     color:#ccc;
     font-size: 64px;
 }
@@ -337,6 +347,12 @@ p.arrow {
     color:#282828;
     margin-top: 64px;
 }
+@media screen and (max-width:600px) {
+    p.arrow {
+        font-size: 0.8rem;
+        padding:16px 20px;
+    }
+}
 .arrow:hover {
     background-color: var(--primary-color);
 }
@@ -383,6 +399,12 @@ button#seeMoreBtn:hover {
     color: #282828;
     filter: drop-shadow(0px 5px 7.5px #edd3503b);
 }
+h1.imgText{
+    font-size: clamp(1.5rem, 3vw, 5rem);
+}
+.slider-text span {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
 .graphix-section{
     margin-top: 100px;
     text-align: right;
@@ -406,17 +428,31 @@ button#seeMoreBtn:hover {
     height:1500px;
 }
 .journey-content{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:start;
+}
+.journey-content  {
+    flex:1;
 }
 .journey-graphix {
-    float:left;
+    grid-column: 1;
+    grid-row:1;
+}
+.journey-prog {
+  grid-column: 2;
+  grid-row: 2;
 }
 .journey-prog{
     float:right;
 }
 .journey-prog {
     text-align: right;
+}
+@media (max-width: 1000px) {
+  .journey-content {
+    grid-template-columns: 1fr; 
+  }
+  .journey-graphix { grid-column: 1; grid-row: 1; }
+  .journey-prog   { grid-column: 1; grid-row: 2; }
 }
