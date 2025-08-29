@@ -18,8 +18,8 @@
         </ul>
         <div id="logo" class="light">
           <a href="#">
-            <img src="PS/sideline logo png white.png" alt="" class="lightImg">
-            <img src="PS/sideline logo png black.png" alt="" class="darkImg">
+            <img src="/PS/sideline logo png white.png" alt="" class="lightImg">
+            <img src="/PS/sideline logo png black.png" alt="" class="darkImg">
           </a>
         </div>
         <ul>
@@ -47,7 +47,7 @@
       <h1>Graphic Designer</h1>
       <p>5 Years of Experience</p>
       <div class="btns">
-        <button>My Works</button>
+        <button class="lightBtn">My Works</button>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
     <br>
     <div class="case-studies-section">
       <div class="case-studies-title" style="display: flex; align-items: baseline; gap:12px;">
-        <h1>Case Studies</h1>
+        <h1 class="sectionH1">Case Studies</h1>
       </div>
       <hr>
       <h2>Arcline</h2><span>— About my first nickname and a logo project <br> that didn't make it (and why)</span>
@@ -65,28 +65,28 @@
         <p class="arrow" id="arrowLeft">&lt;</p>
         <div class="slider-wrapper">
             <div class="slider-text">
-                <h1 style="font-size: 36px;font-weight: 400;" class="imgText">Presentation <span>— Logo</span></h1><br><br>
-                <h1 style="font-size: 36px;font-weight: 400;" class="imgText">Presentation <span>— Logo Analysis</span></h1><br><br>
-                <h1 style="font-size: 36px;font-weight: 400;" class="imgText">Presentation <span>— What went wrong?</span></h1><br><br>
-                <h1 style="font-size: 36px;font-weight: 400;" class="imgText">Presentation <span>— Why</span></h1><br><br>
+                <h1 style="font-weight: 400;" class="imgText">Presentation <span>— Logo</span></h1><br><br>
+                <h1 style="font-weight: 400;" class="imgText">Presentation <span>— Logo Analysis</span></h1><br><br>
+                <h1 style="font-weight: 400;" class="imgText">Presentation <span>— What went wrong?</span></h1><br><br>
+                <h1 style="font-weight: 400;" class="imgText">Presentation <span>— Why</span></h1><br><br>
             </div>
             <div class="slider">
-                <img src="Arcline-logo-preview/arcline 1.png" alt="" class="case-img">
-                <img src="Arcline-logo-preview/arcline 2.png" alt="" class="case-img">
-                <img src="Arcline-logo-preview/arcline 3.png" alt="" class="case-img">
-                <img src="Arcline-logo-preview/arcline 4.png" alt="" class="case-img">
+                <img src="/Arcline-logo-preview/arcline 1.png" alt="" class="case-img">
+                <img src="/Arcline-logo-preview/arcline 2.png" alt="" class="case-img">
+                <img src="/Arcline-logo-preview/arcline 3.png" alt="" class="case-img">
+                <img src="/Arcline-logo-preview/arcline 4.png" alt="" class="case-img">
             </div>
             <button id="seeMoreBtn">See More</button>
         </div>
         <p class="arrow" id="arrowRight">&gt;</p>
       </div>
-      <p id="case-closure" >I spent a few weeks planning it and a few more weeks building it. <br><br>The project failed for the reasons listed above, but fortunately, it inspired my current nickname and logo. <br><br>Most importantly, I truly enjoyed the process. <span style="font-weight: 300; color:var(--primary-color); opacity: 1; font-size: 24px;">Thanks</span> for reading this, pal, keep scrolling! :)</p>
+      <p id="case-closure" >I spent a few weeks planning it and a few more weeks building it. <br><br>The project failed for the reasons listed above, but fortunately, it inspired my current nickname and logo. <br><br>Most importantly, I truly enjoyed the process. <span style="font-weight: 300; color:var(--primary-color); opacity: 1; font-size: clamp(1rem, 3vw, 1.5rem); letter-spacing: 0;">Thanks</span> for reading this, pal, keep scrolling! :)</p>
     </div>
   </div>
   <div class="container" id="graphix-section">
     <br>
     <div class="graphix-section">
-        <h1>Graphix</h1>
+        <h1 class="sectionH1">Graphix</h1>
         <hr>
         <br><br>
         <h2>Posters</h2>
@@ -100,16 +100,18 @@
   <div class="container" id="journey-section">
     <br>
     <div class="journey-section">
-        <h1>My Journey</h1>
+        <h1 class="sectionH1">My Journey</h1>
         <hr>
         <div class="journey-content">
             <div class="journey-graphix">
             <h2>In graphic design</h2>
-            <span>I first got into graphic design back in 2020 during the pandemic. <br> With plenty of free time and just my laptop, I started creating <br>profile pictures for people online—sometimes for free, sometimes <br> for a little something. I joined a bunch of groups, connected <br> with other creatives, and really enjoyed the process. By 2023, I <br> took a break for a while, but now I'm back, excited to keep <br> creating and growing.</span>
+            <span style="font-size: clamp(0.8rem, 3vw, 1.5rem);">
+              I first got into graphic design back in 2020 during the pandemic. With plenty of free time and just my laptop, I started creating profile pictures for people online—sometimes for free, sometimes for a little something. I joined a bunch of groups, connected with other creatives, and really enjoyed the process. By 2023, I took a break for a while, but now I'm back, excited to keep creating and growing.
+            </span>
         </div>
         <div class="journey-prog">
             <h2>In programming</h2>
-            <span>I got into programming in the summer of 2024. Honestly, I was just bored <br> and stumbled across a video claiming HTML and CSS were the easiest languages ever. <br>So I thought, why not? After a couple of months of building websites every day, <br>I pretty much had them down. School slowed me down when it came to JavaScript, <br>but now I'm back at it and finally diving into it.</span>
+            <span style="font-size: clamp(0.8rem, 3vw, 1.5rem);">I got into programming in the summer of 2024. Honestly, I was just bored and stumbled across a video claiming HTML and CSS were the easiest languages ever. So I thought, why not? After a couple of months of building websites every day, I pretty much had them down. School slowed me down when it came to JavaScript, but now I'm back at it and finally diving into it.</span>
         </div>
         </div>
         
@@ -117,4 +119,3 @@
   </div>
 </body>
 </html>
-
