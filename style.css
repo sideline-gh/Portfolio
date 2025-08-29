@@ -6,10 +6,7 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
 :root {
     --primary-color:hsl(50, 81%, 62%);
     --text-color:#ccc;
@@ -518,4 +515,5 @@ button#seeMoreBtn:hover {
         display: block; 
     }
 }
+
 
