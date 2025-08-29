@@ -1,0 +1,50 @@
+:root{
+    --light-background:white;
+    --primary-color:#56a5eb;
+    --background-color:#ecf5ff;
+    --text-color:#333;
+    --list-color:#fff;
+    --high-score-color:#56a5eb;
+}
+.dark-mode {
+    --background-color:#222222;
+    --text-color:#f5f2f2;
+    --light-background:rgb(38, 38, 38);
+    --list-color:#333;
+    --high-score-color:#fff;
+}
+
+#highScoresList {
+    list-style-type: none;
+    padding-left:0;
+    margin-bottom: 4rem;
+}
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    transition: all 500ms ease;
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+}
+
+.list-item {
+    width:50rem;
+    height:6rem;
+    border:1px solid var(--text-color);
+    color:var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding:2rem;
+    font-size: 2rem;
+}
+.list-item:hover {
+    transform: scale(1.01);
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
