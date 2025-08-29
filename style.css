@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+body {
+    overflow-x: hidden;
+}
 :root {
     --primary-color:hsl(50, 81%, 62%);
     --text-color:#ccc;
@@ -31,14 +34,20 @@ li{
 #logo img:hover {
     transform: scale(1.15);
 }
-.light img.darkImg{ display: none; }
-.dark img.lightImg{ display: none; }
+.light img.darkImg{ 
+    display: none; 
+}
+.dark img.lightImg{ 
+    display: none; 
+}
 
 a{
     color:#fff;
     text-decoration: none;
 }
-nav a{ transition:all 500ms ease; }
+nav a{ 
+    transition:all 500ms ease; 
+}
 nav a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -63,23 +72,39 @@ nav a:hover {
     padding: 32px 0;
     border-radius: 0 0 48px 48px;
 }
-h1 { font-size: clamp(1.5rem, 5vw, 3rem); }
-p  { font-size: clamp(1rem, 3vw, 1.5rem); }
+h1.sectionH1{
+    font-size: clamp(2rem, 5vw, 4rem); 
+}
+h2 {
+    font-size: clamp(1rem, 5vw, 3rem);
+}
+p  { 
+    font-size: clamp(0.1rem, 3vw, 1.5rem); 
+}
 
 .journey-content span {
-  display: block;
-  max-width: 60ch; 
-  line-height: 1.5;
+    display: block;
+    max-width: 60ch; 
+    line-height: 1.5;
 }
 
 @media (max-width: 900px) {
-    .grid { grid-template-columns: 1fr 1fr; }
+    .grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
 }
 
 .header nav,
-ul{ display: flex; }
-nav { justify-content: space-evenly; align-items: center; }
-ul { gap:36px; }
+ul{ 
+    display: flex; 
+}
+nav { 
+    justify-content: space-evenly; 
+    align-items: center; 
+}
+ul { 
+    gap:36px; 
+}
 
 .hero-section {
     display: flex;
@@ -110,8 +135,12 @@ ul { gap:36px; }
     font-family: monospace;
 }
 
-.hero-section h1 { font-size: 48px; }
-.hero-section p  { font-size: 24px; }
+.hero-section h1 { 
+    font-size: 48px; 
+}
+.hero-section p  { 
+    font-size: 24px; 
+}
 
 .right-hero,
 .left-hero {
@@ -144,10 +173,16 @@ button.darkBtn {
     background-color: #dbdbdb;
     border:1px solid transparent;
 }
-button.lightBtn { color:#282828; }
-#seeMoreBtn { color:#282828; }
+button.lightBtn { 
+    color:#282828; 
+}
+#seeMoreBtn { 
+    color:#282828; 
+}
 
-.right-hero button { font-family: monospace; }
+.right-hero button { 
+    font-family: monospace; 
+}
 button {
     cursor: pointer;
     padding:8px 32px;
@@ -165,9 +200,13 @@ button.darkBtn:hover {
     color:#fff;
 }
 
-@media screen and (min-width: 601px) and (max-width: 768px){
-    nav { justify-content: center; }
-    nav ul { display: none; }
+@media screen and (min-width: 600px) and (max-width: 768px){
+    nav { 
+        justify-content: center; 
+    }
+    nav ul { 
+        display: none; 
+    }
     .hero-section p.iGot,
     .hero-section p.color,
     .hero-section p.whatYouWant{
@@ -180,8 +219,12 @@ button.darkBtn:hover {
 }
 
 @media screen and (max-width: 600px){
-    nav { justify-content: center; }
-    nav ul { display: none; }
+    nav { 
+        justify-content: center; 
+    }
+    nav ul { 
+        display: none; 
+    }
     button {
         padding: 12px 40px;
         font-size: 1.1rem;
@@ -197,17 +240,22 @@ button.darkBtn:hover {
         padding: 60px 20px;
         margin-top: 0; 
     }
-    .hero-section h1 { font-size: clamp(24px, 6vw, 36px); }
-    .hero-section p  { font-size: clamp(14px, 4vw, 20px); }
+    .hero-section h1 { 
+        font-size: clamp(24px, 6vw, 36px); 
+    }
+    .hero-section p  { 
+        font-size: clamp(14px, 4vw, 20px); 
+    }
     .hero-section p.iGot,
     .hero-section p.whatYouWant,
-    .hero-section p.color { display: none; }
+    .hero-section p.color { 
+        display: none; 
+    }
 }
 
 .case-studies-section {
     color:#fff;
     margin: 100px auto;
-    height:1500px;
 }
 .case-studies-section h1.sectionH1,
 .graphix-section h1.sectionH1,
@@ -216,7 +264,6 @@ button.darkBtn:hover {
 .about-section h1.sectionH1,
 .contact h1.sectionH1{
     color:#ccc;
-    font-size: 64px;
 }
 .case-studies-section h2,
 .graphix-section h2,
@@ -226,7 +273,6 @@ button.darkBtn:hover {
 .contact h2 {
     color:var(--primary-color);
     font-weight: 500;
-    font-size: 48px;
     font-style: italic;
     margin-bottom: 16px;
 }
@@ -239,7 +285,6 @@ button.darkBtn:hover {
     color:#fff;
     opacity:0.75;
     font-weight: 100;
-    font-size: 20px;
     line-height: 1.4;
     letter-spacing: 1px;
 }
@@ -256,18 +301,20 @@ button.darkBtn:hover {
 }
 .graphix-section hr,
 .projects-section hr,
-.contact-section hr{ float:right; }
+.contact-section hr{ 
+    float:right; 
+}
 
 .case-studies-images {
-  position: relative;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  width: 900px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .slider-wrapper {
@@ -327,19 +374,26 @@ button.darkBtn:hover {
     .arrow-mobile{
         display: flex;
         justify-content: space-between;
-        gap:200px;
+        gap:20px;
         margin-top: 1rem;
     }
     .slider-wrapper {
         flex-direction: column;
         gap: 8px;
-  }
+}
 
     .arrow {
         font-size: 36px;
         padding:20px 32px;
         order:-5;
-  }
+}
+}
+.mobile-version-case {
+    margin-top: 4rem;
+}
+.mobile-version-case img {
+    max-width: 100%;
+    border:1px solid gray;
 }
 
 p#case-closure {
@@ -403,7 +457,7 @@ button#seeMoreBtn:hover {
 }
 .graphix-section img {
     max-width: 100%;
-    width:1000px;
+    width:auto;
     margin: 0 auto;
     display: block;
 }
@@ -436,15 +490,29 @@ button#seeMoreBtn:hover {
 }
 
 @media (max-width: 1000px) {
-  .journey-content { grid-template-columns: 1fr; 
+    .journey-content { grid-template-columns: 1fr; 
+    }
+    .journey-graphix { 
+        grid-column: 1; 
+        grid-row: 1; 
+    }
+    .journey-prog    { 
+        grid-column: 1; 
+        grid-row: 2; 
+    }
 }
-  .journey-graphix { 
-    grid-column: 1; 
-    grid-row: 1; 
+.slider-wrapper { 
+    display: flex; 
 }
-  .journey-prog    { 
-    grid-column: 1; 
-    grid-row: 2; 
-    text-align: left; 
+.mobile-version-case { 
+    display: none; 
 }
+
+@media (max-width: 768px) {
+    .slider-wrapper { 
+        display: none; 
+    }
+    .mobile-version-case { 
+        display: block; 
+    }
 }
