@@ -294,7 +294,6 @@ hr {
     margin:16px 0;
     opacity: 0.5;
     width:100%;
-    max-width:250px;
 }
 .graphix-section hr,
 .projects-section hr,
@@ -518,6 +517,7 @@ button#seeMoreBtn:hover {
         display: block; 
     }
 }
+
 
 
 
