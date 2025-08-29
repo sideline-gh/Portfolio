@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-    outline: 1px solid red;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -298,7 +297,8 @@ button.darkBtn:hover {
     height: 1px;
     margin:16px 0;
     opacity: 0.5;
-    width:500px;
+    width:100%;
+    max-width:500px;
 }
 .graphix-section hr,
 .projects-section hr,
@@ -522,6 +522,7 @@ button#seeMoreBtn:hover {
         display: block; 
     }
 }
+
 
 
 
