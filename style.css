@@ -288,17 +288,13 @@ button.darkBtn:hover {
     line-height: 1.4;
     letter-spacing: 1px;
 }
-.case-studies-section hr,
-.graphix-section hr,
-.journey-section hr,
-.projects-section hr,
-.about-section hr,
-.contact-section hr{
+
+hr {
     height: 1px;
     margin:16px 0;
     opacity: 0.5;
     width:100%;
-    max-width:500px;
+    max-width:250px;
 }
 .graphix-section hr,
 .projects-section hr,
@@ -522,6 +518,7 @@ button#seeMoreBtn:hover {
         display: block; 
     }
 }
+
 
 
 
