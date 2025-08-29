@@ -6,8 +6,9 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
-body {
-    overflow-x: hidden;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 :root {
     --primary-color:hsl(50, 81%, 62%);
@@ -490,7 +491,8 @@ button#seeMoreBtn:hover {
 }
 
 @media (max-width: 1000px) {
-    .journey-content { grid-template-columns: 1fr; 
+    .journey-content { 
+        grid-template-columns: 1fr; 
     }
     .journey-graphix { 
         grid-column: 1; 
@@ -516,3 +518,4 @@ button#seeMoreBtn:hover {
         display: block; 
     }
 }
+
