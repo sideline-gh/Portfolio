@@ -390,8 +390,12 @@ button.darkBtn:hover {
     margin-top: 4rem;
 }
 .mobile-version-case img {
-    max-width: 100%;
-    border:1px solid gray;
+    display: block;
+    width: 100%;
+    height: auto;        
+    max-width: 100%;      
+    margin: 0 auto 2rem; 
+    border: 1px solid gray;
 }
 
 p#case-closure {
@@ -515,5 +519,6 @@ button#seeMoreBtn:hover {
         display: block; 
     }
 }
+
 
 
