@@ -608,4 +608,9 @@ button#seeMoreBtn:hover {
         filter:none;
     }
 }
+@media screen and (max-width:768px) {
+    .project-card {
+        width:350px;
+    }
+}
 
