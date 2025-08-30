@@ -557,6 +557,9 @@ button#seeMoreBtn:hover {
     font-size: 1rem;
     color:#282828;
 }
+.project-card a {
+    color:#282828;
+}
 .card-btn:hover {
     background-color: var(--primary-color);
     color:#282828;
@@ -613,4 +616,5 @@ button#seeMoreBtn:hover {
         width:350px;
     }
 }
+
 
