@@ -555,6 +555,7 @@ button#seeMoreBtn:hover {
     border:none;
     margin-top: 24px;
     font-size: 1rem;
+    color:#282828;
 }
 .card-btn:hover {
     background-color: var(--primary-color);
@@ -607,3 +608,4 @@ button#seeMoreBtn:hover {
         filter:none;
     }
 }
+
